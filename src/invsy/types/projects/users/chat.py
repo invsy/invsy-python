@@ -1,21 +1,10 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-from typing import Dict, List, Optional
-from typing_extensions import Literal
+from typing import Dict, Optional
 
 from ...._models import BaseModel
 
-__all__ = ["Chat", "Message"]
-
-
-class Message(BaseModel):
-    id: str
-
-    content: str
-
-    created_at: str
-
-    role: Literal["user", "assistant"]
+__all__ = ["Chat"]
 
 
 class Chat(BaseModel):
@@ -23,7 +12,7 @@ class Chat(BaseModel):
 
     created_at: str
 
-    messages: List[Message]
+    messages: str
 
     project_id: str
 

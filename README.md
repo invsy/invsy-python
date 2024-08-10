@@ -31,7 +31,7 @@ from invsy import Invsy
 
 client = Invsy()
 
-chat_create_response = client.projects.users.chats.create(
+chat = client.projects.users.chats.create(
     user_id="REPLACE_ME",
     project_id="REPLACE_ME",
     body={
@@ -39,7 +39,7 @@ chat_create_response = client.projects.users.chats.create(
         "group_id": "group123",
     },
 )
-print(chat_create_response.id)
+print(chat.id)
 ```
 
 ## Async usage
@@ -54,7 +54,7 @@ client = AsyncInvsy()
 
 
 async def main() -> None:
-    chat_create_response = await client.projects.users.chats.create(
+    chat = await client.projects.users.chats.create(
         user_id="REPLACE_ME",
         project_id="REPLACE_ME",
         body={
@@ -62,7 +62,7 @@ async def main() -> None:
             "group_id": "group123",
         },
     )
-    print(chat_create_response.id)
+    print(chat.id)
 
 
 asyncio.run(main())
