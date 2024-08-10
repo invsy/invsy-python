@@ -660,13 +660,13 @@ class TestInvsy:
     @mock.patch("invsy._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
     def test_retrying_timeout_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
             side_effect=httpx.TimeoutException("Test timeout error")
         )
 
         with pytest.raises(APITimeoutError):
             self.client.post(
-                "/projects/proj123/users/user123/chats",
+                "/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats",
                 body=cast(
                     object,
                     dict(
@@ -685,11 +685,13 @@ class TestInvsy:
     @mock.patch("invsy._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
     def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(return_value=httpx.Response(500))
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
+            return_value=httpx.Response(500)
+        )
 
         with pytest.raises(APIStatusError):
             self.client.post(
-                "/projects/proj123/users/user123/chats",
+                "/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats",
                 body=cast(
                     object,
                     dict(
@@ -720,11 +722,13 @@ class TestInvsy:
                 return httpx.Response(500)
             return httpx.Response(200)
 
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(side_effect=retry_handler)
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
+            side_effect=retry_handler
+        )
 
         response = client.projects.users.chats.with_raw_response.create(
-            user_id="user123",
-            project_id="proj123",
+            user_id="3db648cbb7f933aeb705b821c47c0e39",
+            project_id="7240303bcfc8a079bf67c2caa08b5d29",
             body={
                 "share_path": "/custom/path",
                 "group_id": "group123",
@@ -1355,13 +1359,13 @@ class TestAsyncInvsy:
     @mock.patch("invsy._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
     async def test_retrying_timeout_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
             side_effect=httpx.TimeoutException("Test timeout error")
         )
 
         with pytest.raises(APITimeoutError):
             await self.client.post(
-                "/projects/proj123/users/user123/chats",
+                "/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats",
                 body=cast(
                     object,
                     dict(
@@ -1380,11 +1384,13 @@ class TestAsyncInvsy:
     @mock.patch("invsy._base_client.BaseClient._calculate_retry_timeout", _low_retry_timeout)
     @pytest.mark.respx(base_url=base_url)
     async def test_retrying_status_errors_doesnt_leak(self, respx_mock: MockRouter) -> None:
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(return_value=httpx.Response(500))
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
+            return_value=httpx.Response(500)
+        )
 
         with pytest.raises(APIStatusError):
             await self.client.post(
-                "/projects/proj123/users/user123/chats",
+                "/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats",
                 body=cast(
                     object,
                     dict(
@@ -1418,11 +1424,13 @@ class TestAsyncInvsy:
                 return httpx.Response(500)
             return httpx.Response(200)
 
-        respx_mock.post("/projects/proj123/users/user123/chats").mock(side_effect=retry_handler)
+        respx_mock.post("/projects/7240303bcfc8a079bf67c2caa08b5d29/users/3db648cbb7f933aeb705b821c47c0e39/chats").mock(
+            side_effect=retry_handler
+        )
 
         response = await client.projects.users.chats.with_raw_response.create(
-            user_id="user123",
-            project_id="proj123",
+            user_id="3db648cbb7f933aeb705b821c47c0e39",
+            project_id="7240303bcfc8a079bf67c2caa08b5d29",
             body={
                 "share_path": "/custom/path",
                 "group_id": "group123",
