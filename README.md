@@ -31,7 +31,7 @@ from invsy import Invsy
 
 client = Invsy()
 
-chat = client.projects.users.chats.create(
+chat_create_response = client.projects.users.chats.create(
     user_id="REPLACE_ME",
     project_id="REPLACE_ME",
     body={
@@ -39,7 +39,7 @@ chat = client.projects.users.chats.create(
         "group_id": "group123",
     },
 )
-print(chat.id)
+print(chat_create_response.result)
 ```
 
 ## Async usage
@@ -54,7 +54,7 @@ client = AsyncInvsy()
 
 
 async def main() -> None:
-    chat = await client.projects.users.chats.create(
+    chat_create_response = await client.projects.users.chats.create(
         user_id="REPLACE_ME",
         project_id="REPLACE_ME",
         body={
@@ -62,7 +62,7 @@ async def main() -> None:
             "group_id": "group123",
         },
     )
-    print(chat.id)
+    print(chat_create_response.result)
 
 
 asyncio.run(main())
@@ -232,7 +232,7 @@ response = client.projects.users.chats.with_raw_response.create(
 print(response.headers.get('X-My-Header'))
 
 chat = response.parse()  # get the object that `projects.users.chats.create()` would have returned
-print(chat.id)
+print(chat.result)
 ```
 
 These methods return an [`APIResponse`](https://github.com/stainless-sdks/invsy-python/tree/main/src/invsy/_response.py) object.

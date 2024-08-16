@@ -9,7 +9,12 @@ import pytest
 
 from invsy import Invsy, AsyncInvsy
 from tests.utils import assert_matches_type
-from invsy.types.projects.users import Chat, Chats
+from invsy.types.projects.users import (
+    ChatListResponse,
+    ChatCreateResponse,
+    ChatUpdateResponse,
+    ChatRetrieveResponse,
+)
 
 base_url = os.environ.get("TEST_API_BASE_URL", "http://127.0.0.1:4010")
 
@@ -27,7 +32,7 @@ class TestChats:
                 "group_id": "group123",
             },
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
     @parametrize
     def test_raw_response_create(self, client: Invsy) -> None:
@@ -43,7 +48,7 @@ class TestChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
     @parametrize
     def test_streaming_response_create(self, client: Invsy) -> None:
@@ -59,7 +64,7 @@ class TestChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -92,7 +97,7 @@ class TestChats:
             project_id="7240303bcfc8a079bf67c2caa08b5d29",
             user_id="3db648cbb7f933aeb705b821c47c0e39",
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
     @parametrize
     def test_raw_response_retrieve(self, client: Invsy) -> None:
@@ -105,7 +110,7 @@ class TestChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
     @parametrize
     def test_streaming_response_retrieve(self, client: Invsy) -> None:
@@ -118,7 +123,7 @@ class TestChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -154,7 +159,7 @@ class TestChats:
             content="Hello, this is a message.",
             role="user",
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
     @parametrize
     def test_raw_response_update(self, client: Invsy) -> None:
@@ -169,7 +174,7 @@ class TestChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
     @parametrize
     def test_streaming_response_update(self, client: Invsy) -> None:
@@ -184,7 +189,7 @@ class TestChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -223,7 +228,7 @@ class TestChats:
             user_id="3db648cbb7f933aeb705b821c47c0e39",
             project_id="7240303bcfc8a079bf67c2caa08b5d29",
         )
-        assert_matches_type(Chats, chat, path=["response"])
+        assert_matches_type(ChatListResponse, chat, path=["response"])
 
     @parametrize
     def test_raw_response_list(self, client: Invsy) -> None:
@@ -235,7 +240,7 @@ class TestChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = response.parse()
-        assert_matches_type(Chats, chat, path=["response"])
+        assert_matches_type(ChatListResponse, chat, path=["response"])
 
     @parametrize
     def test_streaming_response_list(self, client: Invsy) -> None:
@@ -247,7 +252,7 @@ class TestChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = response.parse()
-            assert_matches_type(Chats, chat, path=["response"])
+            assert_matches_type(ChatListResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -279,7 +284,7 @@ class TestAsyncChats:
                 "group_id": "group123",
             },
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
     @parametrize
     async def test_raw_response_create(self, async_client: AsyncInvsy) -> None:
@@ -295,7 +300,7 @@ class TestAsyncChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = await response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
     @parametrize
     async def test_streaming_response_create(self, async_client: AsyncInvsy) -> None:
@@ -311,7 +316,7 @@ class TestAsyncChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = await response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatCreateResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -344,7 +349,7 @@ class TestAsyncChats:
             project_id="7240303bcfc8a079bf67c2caa08b5d29",
             user_id="3db648cbb7f933aeb705b821c47c0e39",
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
     @parametrize
     async def test_raw_response_retrieve(self, async_client: AsyncInvsy) -> None:
@@ -357,7 +362,7 @@ class TestAsyncChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = await response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
     @parametrize
     async def test_streaming_response_retrieve(self, async_client: AsyncInvsy) -> None:
@@ -370,7 +375,7 @@ class TestAsyncChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = await response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatRetrieveResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -406,7 +411,7 @@ class TestAsyncChats:
             content="Hello, this is a message.",
             role="user",
         )
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
     @parametrize
     async def test_raw_response_update(self, async_client: AsyncInvsy) -> None:
@@ -421,7 +426,7 @@ class TestAsyncChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = await response.parse()
-        assert_matches_type(Chat, chat, path=["response"])
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
     @parametrize
     async def test_streaming_response_update(self, async_client: AsyncInvsy) -> None:
@@ -436,7 +441,7 @@ class TestAsyncChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = await response.parse()
-            assert_matches_type(Chat, chat, path=["response"])
+            assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
@@ -475,7 +480,7 @@ class TestAsyncChats:
             user_id="3db648cbb7f933aeb705b821c47c0e39",
             project_id="7240303bcfc8a079bf67c2caa08b5d29",
         )
-        assert_matches_type(Chats, chat, path=["response"])
+        assert_matches_type(ChatListResponse, chat, path=["response"])
 
     @parametrize
     async def test_raw_response_list(self, async_client: AsyncInvsy) -> None:
@@ -487,7 +492,7 @@ class TestAsyncChats:
         assert response.is_closed is True
         assert response.http_request.headers.get("X-Stainless-Lang") == "python"
         chat = await response.parse()
-        assert_matches_type(Chats, chat, path=["response"])
+        assert_matches_type(ChatListResponse, chat, path=["response"])
 
     @parametrize
     async def test_streaming_response_list(self, async_client: AsyncInvsy) -> None:
@@ -499,7 +504,7 @@ class TestAsyncChats:
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
 
             chat = await response.parse()
-            assert_matches_type(Chats, chat, path=["response"])
+            assert_matches_type(ChatListResponse, chat, path=["response"])
 
         assert cast(Any, response.is_closed) is True
 
