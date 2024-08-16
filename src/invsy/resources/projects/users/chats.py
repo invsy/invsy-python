@@ -22,8 +22,10 @@ from ...._response import (
 )
 from ...._base_client import make_request_options
 from ....types.projects.users import chat_create_params, chat_update_params
-from ....types.projects.users.chat import Chat
-from ....types.projects.users.chats import Chats
+from ....types.projects.users.chat_list_response import ChatListResponse
+from ....types.projects.users.chat_create_response import ChatCreateResponse
+from ....types.projects.users.chat_update_response import ChatUpdateResponse
+from ....types.projects.users.chat_retrieve_response import ChatRetrieveResponse
 
 __all__ = ["ChatsResource", "AsyncChatsResource"]
 
@@ -49,7 +51,7 @@ class ChatsResource(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatCreateResponse:
         """
         Create a new chat in a project
 
@@ -74,7 +76,7 @@ class ChatsResource(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatCreateResponse,
         )
 
     def retrieve(
@@ -89,7 +91,7 @@ class ChatsResource(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatRetrieveResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -111,7 +113,7 @@ class ChatsResource(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatRetrieveResponse,
         )
 
     def update(
@@ -128,7 +130,7 @@ class ChatsResource(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatUpdateResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -157,7 +159,7 @@ class ChatsResource(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatUpdateResponse,
         )
 
     def list(
@@ -171,7 +173,7 @@ class ChatsResource(SyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chats:
+    ) -> ChatListResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -191,7 +193,7 @@ class ChatsResource(SyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chats,
+            cast_to=ChatListResponse,
         )
 
 
@@ -216,7 +218,7 @@ class AsyncChatsResource(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatCreateResponse:
         """
         Create a new chat in a project
 
@@ -241,7 +243,7 @@ class AsyncChatsResource(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatCreateResponse,
         )
 
     async def retrieve(
@@ -256,7 +258,7 @@ class AsyncChatsResource(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatRetrieveResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -278,7 +280,7 @@ class AsyncChatsResource(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatRetrieveResponse,
         )
 
     async def update(
@@ -295,7 +297,7 @@ class AsyncChatsResource(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chat:
+    ) -> ChatUpdateResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -324,7 +326,7 @@ class AsyncChatsResource(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chat,
+            cast_to=ChatUpdateResponse,
         )
 
     async def list(
@@ -338,7 +340,7 @@ class AsyncChatsResource(AsyncAPIResource):
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
-    ) -> Chats:
+    ) -> ChatListResponse:
         """
         Args:
           extra_headers: Send extra headers
@@ -358,7 +360,7 @@ class AsyncChatsResource(AsyncAPIResource):
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=Chats,
+            cast_to=ChatListResponse,
         )
 
 
