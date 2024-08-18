@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
-from typing_extensions import Literal, Required, TypedDict
+from typing import Union, Iterable, Optional
+from typing_extensions import Literal, Required, Annotated, TypedDict
 
-__all__ = ["ChatUpdateParams"]
+from ...._utils import PropertyInfo
+
+__all__ = ["ChatUpdateParams", "ContentUnionMember1"]
 
 
 class ChatUpdateParams(TypedDict, total=False):
@@ -12,6 +15,16 @@ class ChatUpdateParams(TypedDict, total=False):
 
     user_id: Required[str]
 
-    content: Required[str]
+    content: Required[Union[str, Iterable[ContentUnionMember1]]]
 
     role: Required[Literal["user", "assistant", "tool"]]
+
+
+class ContentUnionMember1(TypedDict, total=False):
+    tool_call_id: Required[Annotated[str, PropertyInfo(alias="toolCallId")]]
+
+    tool_name: Required[Annotated[str, PropertyInfo(alias="toolName")]]
+
+    type: Required[str]
+
+    result: Optional[object]
