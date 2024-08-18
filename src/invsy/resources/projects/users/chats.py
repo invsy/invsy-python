@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Dict
+from typing import Dict, Union, Iterable
 from typing_extensions import Literal
 
 import httpx
@@ -122,7 +122,7 @@ class ChatsResource(SyncAPIResource):
         *,
         project_id: str,
         user_id: str,
-        content: str,
+        content: Union[str, Iterable[chat_update_params.ContentUnionMember1]],
         role: Literal["user", "assistant", "tool"],
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
@@ -289,7 +289,7 @@ class AsyncChatsResource(AsyncAPIResource):
         *,
         project_id: str,
         user_id: str,
-        content: str,
+        content: Union[str, Iterable[chat_update_params.ContentUnionMember1]],
         role: Literal["user", "assistant", "tool"],
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
