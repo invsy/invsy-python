@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Dict, Union, Iterable
-from typing_extensions import Literal
+from typing import Dict, Iterable
 
 import httpx
 
@@ -120,10 +119,14 @@ class ChatsResource(SyncAPIResource):
         self,
         chat_id: str,
         *,
-        project_id: str,
-        user_id: str,
-        content: Union[str, Iterable[chat_update_params.ContentUnionMember1]],
-        role: Literal["user", "assistant", "tool"],
+        path_project_id: str,
+        path_user_id: str,
+        id: str,
+        created_at: str,
+        messages: Iterable[chat_update_params.Message],
+        body_project_id: str,
+        body_user_id: str,
+        meta: Dict[str, str] | NotGiven = NOT_GIVEN,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
@@ -133,6 +136,8 @@ class ChatsResource(SyncAPIResource):
     ) -> ChatUpdateResponse:
         """
         Args:
+          meta: Metadata for the chat
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request
@@ -141,18 +146,22 @@ class ChatsResource(SyncAPIResource):
 
           timeout: Override the client-level default timeout for this request, in seconds
         """
-        if not project_id:
-            raise ValueError(f"Expected a non-empty value for `project_id` but received {project_id!r}")
-        if not user_id:
-            raise ValueError(f"Expected a non-empty value for `user_id` but received {user_id!r}")
+        if not path_project_id:
+            raise ValueError(f"Expected a non-empty value for `path_project_id` but received {path_project_id!r}")
+        if not path_user_id:
+            raise ValueError(f"Expected a non-empty value for `path_user_id` but received {path_user_id!r}")
         if not chat_id:
             raise ValueError(f"Expected a non-empty value for `chat_id` but received {chat_id!r}")
         return self._put(
-            f"/projects/{project_id}/users/{user_id}/chats/{chat_id}",
+            f"/projects/{path_project_id}/users/{path_user_id}/chats/{chat_id}",
             body=maybe_transform(
                 {
-                    "content": content,
-                    "role": role,
+                    "id": id,
+                    "created_at": created_at,
+                    "messages": messages,
+                    "project_id": body_project_id,
+                    "user_id": body_user_id,
+                    "meta": meta,
                 },
                 chat_update_params.ChatUpdateParams,
             ),
@@ -287,10 +296,14 @@ class AsyncChatsResource(AsyncAPIResource):
         self,
         chat_id: str,
         *,
-        project_id: str,
-        user_id: str,
-        content: Union[str, Iterable[chat_update_params.ContentUnionMember1]],
-        role: Literal["user", "assistant", "tool"],
+        path_project_id: str,
+        path_user_id: str,
+        id: str,
+        created_at: str,
+        messages: Iterable[chat_update_params.Message],
+        body_project_id: str,
+        body_user_id: str,
+        meta: Dict[str, str] | NotGiven = NOT_GIVEN,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
@@ -300,6 +313,8 @@ class AsyncChatsResource(AsyncAPIResource):
     ) -> ChatUpdateResponse:
         """
         Args:
+          meta: Metadata for the chat
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request
@@ -308,18 +323,22 @@ class AsyncChatsResource(AsyncAPIResource):
 
           timeout: Override the client-level default timeout for this request, in seconds
         """
-        if not project_id:
-            raise ValueError(f"Expected a non-empty value for `project_id` but received {project_id!r}")
-        if not user_id:
-            raise ValueError(f"Expected a non-empty value for `user_id` but received {user_id!r}")
+        if not path_project_id:
+            raise ValueError(f"Expected a non-empty value for `path_project_id` but received {path_project_id!r}")
+        if not path_user_id:
+            raise ValueError(f"Expected a non-empty value for `path_user_id` but received {path_user_id!r}")
         if not chat_id:
             raise ValueError(f"Expected a non-empty value for `chat_id` but received {chat_id!r}")
         return await self._put(
-            f"/projects/{project_id}/users/{user_id}/chats/{chat_id}",
+            f"/projects/{path_project_id}/users/{path_user_id}/chats/{chat_id}",
             body=await async_maybe_transform(
                 {
-                    "content": content,
-                    "role": role,
+                    "id": id,
+                    "created_at": created_at,
+                    "messages": messages,
+                    "project_id": body_project_id,
+                    "user_id": body_user_id,
+                    "meta": meta,
                 },
                 chat_update_params.ChatUpdateParams,
             ),

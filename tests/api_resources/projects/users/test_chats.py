@@ -154,10 +154,69 @@ class TestChats:
     def test_method_update(self, client: Invsy) -> None:
         chat = client.projects.users.chats.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
+        )
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
+
+    @parametrize
+    def test_method_update_with_all_params(self, client: Invsy) -> None:
+        chat = client.projects.users.chats.update(
+            chat_id="1febfa740898c02b25897949bf6961ad",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            meta={
+                "share_path": "/custom/path",
+                "group_id": "group123",
+            },
         )
         assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
@@ -165,10 +224,32 @@ class TestChats:
     def test_raw_response_update(self, client: Invsy) -> None:
         response = client.projects.users.chats.with_raw_response.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
         )
 
         assert response.is_closed is True
@@ -180,10 +261,32 @@ class TestChats:
     def test_streaming_response_update(self, client: Invsy) -> None:
         with client.projects.users.chats.with_streaming_response.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -195,31 +298,97 @@ class TestChats:
 
     @parametrize
     def test_path_params_update(self, client: Invsy) -> None:
-        with pytest.raises(ValueError, match=r"Expected a non-empty value for `project_id` but received ''"):
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `path_project_id` but received ''"):
             client.projects.users.chats.with_raw_response.update(
                 chat_id="1febfa740898c02b25897949bf6961ad",
-                project_id="",
-                user_id="3db648cbb7f933aeb705b821c47c0e39",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="",
+                path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="",
+                body_user_id="3db648cbb7f933aeb705b821c47c0e39",
             )
 
-        with pytest.raises(ValueError, match=r"Expected a non-empty value for `user_id` but received ''"):
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `path_user_id` but received ''"):
             client.projects.users.chats.with_raw_response.update(
                 chat_id="1febfa740898c02b25897949bf6961ad",
-                project_id="7240303bcfc8a079bf67c2caa08b5d29",
-                user_id="",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                path_user_id="",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                body_user_id="",
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `chat_id` but received ''"):
             client.projects.users.chats.with_raw_response.update(
                 chat_id="",
-                project_id="7240303bcfc8a079bf67c2caa08b5d29",
-                user_id="3db648cbb7f933aeb705b821c47c0e39",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                body_user_id="3db648cbb7f933aeb705b821c47c0e39",
             )
 
     @parametrize
@@ -406,10 +575,69 @@ class TestAsyncChats:
     async def test_method_update(self, async_client: AsyncInvsy) -> None:
         chat = await async_client.projects.users.chats.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
+        )
+        assert_matches_type(ChatUpdateResponse, chat, path=["response"])
+
+    @parametrize
+    async def test_method_update_with_all_params(self, async_client: AsyncInvsy) -> None:
+        chat = await async_client.projects.users.chats.update(
+            chat_id="1febfa740898c02b25897949bf6961ad",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            meta={
+                "share_path": "/custom/path",
+                "group_id": "group123",
+            },
         )
         assert_matches_type(ChatUpdateResponse, chat, path=["response"])
 
@@ -417,10 +645,32 @@ class TestAsyncChats:
     async def test_raw_response_update(self, async_client: AsyncInvsy) -> None:
         response = await async_client.projects.users.chats.with_raw_response.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
         )
 
         assert response.is_closed is True
@@ -432,10 +682,32 @@ class TestAsyncChats:
     async def test_streaming_response_update(self, async_client: AsyncInvsy) -> None:
         async with async_client.projects.users.chats.with_streaming_response.update(
             chat_id="1febfa740898c02b25897949bf6961ad",
-            project_id="7240303bcfc8a079bf67c2caa08b5d29",
-            user_id="3db648cbb7f933aeb705b821c47c0e39",
-            content="Hello, this is a message.",
-            role="user",
+            path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+            id="1febfa740898c02b25897949bf6961ad",
+            created_at="2024-08-08T21:19:38.855Z",
+            messages=[
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+                {
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "content": "Hello, this is a message.",
+                    "created_at": "2024-08-08T21:19:38.855Z",
+                    "role": "user",
+                },
+            ],
+            body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+            body_user_id="3db648cbb7f933aeb705b821c47c0e39",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -447,31 +719,97 @@ class TestAsyncChats:
 
     @parametrize
     async def test_path_params_update(self, async_client: AsyncInvsy) -> None:
-        with pytest.raises(ValueError, match=r"Expected a non-empty value for `project_id` but received ''"):
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `path_project_id` but received ''"):
             await async_client.projects.users.chats.with_raw_response.update(
                 chat_id="1febfa740898c02b25897949bf6961ad",
-                project_id="",
-                user_id="3db648cbb7f933aeb705b821c47c0e39",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="",
+                path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="",
+                body_user_id="3db648cbb7f933aeb705b821c47c0e39",
             )
 
-        with pytest.raises(ValueError, match=r"Expected a non-empty value for `user_id` but received ''"):
+        with pytest.raises(ValueError, match=r"Expected a non-empty value for `path_user_id` but received ''"):
             await async_client.projects.users.chats.with_raw_response.update(
                 chat_id="1febfa740898c02b25897949bf6961ad",
-                project_id="7240303bcfc8a079bf67c2caa08b5d29",
-                user_id="",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                path_user_id="",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                body_user_id="",
             )
 
         with pytest.raises(ValueError, match=r"Expected a non-empty value for `chat_id` but received ''"):
             await async_client.projects.users.chats.with_raw_response.update(
                 chat_id="",
-                project_id="7240303bcfc8a079bf67c2caa08b5d29",
-                user_id="3db648cbb7f933aeb705b821c47c0e39",
-                content="Hello, this is a message.",
-                role="user",
+                path_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                path_user_id="3db648cbb7f933aeb705b821c47c0e39",
+                id="1febfa740898c02b25897949bf6961ad",
+                created_at="2024-08-08T21:19:38.855Z",
+                messages=[
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                    {
+                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                        "content": "Hello, this is a message.",
+                        "created_at": "2024-08-08T21:19:38.855Z",
+                        "role": "user",
+                    },
+                ],
+                body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
+                body_user_id="3db648cbb7f933aeb705b821c47c0e39",
             )
 
     @parametrize
