@@ -21,14 +21,14 @@ class MessageContentUnionMember1(BaseModel):
 
 
 class Message(BaseModel):
-    id: str
-
     content: Union[str, List[MessageContentUnionMember1]]
     """The content of the message."""
 
-    created_at: str
-
     role: Literal["user", "assistant", "tool"]
+
+    id: Optional[str] = None
+
+    created_at: Optional[str] = None
 
 
 class Chat(BaseModel):

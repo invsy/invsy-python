@@ -160,21 +160,15 @@ class TestChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -193,22 +187,22 @@ class TestChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
             ],
             body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
@@ -230,21 +224,15 @@ class TestChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -267,21 +255,15 @@ class TestChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -307,21 +289,15 @@ class TestChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
@@ -338,21 +314,15 @@ class TestChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
@@ -369,21 +339,15 @@ class TestChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
@@ -581,21 +545,15 @@ class TestAsyncChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -614,22 +572,22 @@ class TestAsyncChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
+                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
+                    "created_at": "2024-08-08T21:19:38.855Z",
                 },
             ],
             body_project_id="7240303bcfc8a079bf67c2caa08b5d29",
@@ -651,21 +609,15 @@ class TestAsyncChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -688,21 +640,15 @@ class TestAsyncChats:
             created_at="2024-08-08T21:19:38.855Z",
             messages=[
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
                 {
-                    "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                     "content": "Hello, this is a message.",
-                    "created_at": "2024-08-08T21:19:38.855Z",
                     "role": "user",
                 },
             ],
@@ -728,21 +674,15 @@ class TestAsyncChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
@@ -759,21 +699,15 @@ class TestAsyncChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
@@ -790,21 +724,15 @@ class TestAsyncChats:
                 created_at="2024-08-08T21:19:38.855Z",
                 messages=[
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                     {
-                        "id": "9f07c436ad3ecb7cb446e5e66400e1e3",
                         "content": "Hello, this is a message.",
-                        "created_at": "2024-08-08T21:19:38.855Z",
                         "role": "user",
                     },
                 ],
