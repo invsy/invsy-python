@@ -40,11 +40,11 @@ class MessageContentUnionMember1(TypedDict, total=False):
 
 
 class Message(TypedDict, total=False):
-    id: Required[str]
-
     content: Required[Union[str, Iterable[MessageContentUnionMember1]]]
     """The content of the message."""
 
-    created_at: Required[str]
-
     role: Required[Literal["user", "assistant", "tool"]]
+
+    id: str
+
+    created_at: str
