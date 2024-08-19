@@ -24,7 +24,7 @@ class Message(BaseModel):
     content: Union[str, List[MessageContentUnionMember1]]
     """The content of the message."""
 
-    role: Literal["user", "assistant", "tool"]
+    role: Literal["user", "assistant", "tool", "system"]
 
     id: Optional[str] = None
 

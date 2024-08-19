@@ -43,7 +43,7 @@ class Message(TypedDict, total=False):
     content: Required[Union[str, Iterable[MessageContentUnionMember1]]]
     """The content of the message."""
 
-    role: Required[Literal["user", "assistant", "tool"]]
+    role: Required[Literal["user", "assistant", "tool", "system"]]
 
     id: str
 
