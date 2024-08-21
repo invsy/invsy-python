@@ -46,7 +46,7 @@ __all__ = [
 
 
 class Invsy(SyncAPIClient):
-    projects: resources.ProjectsResource
+    chats: resources.ChatsResource
     with_raw_response: InvsyWithRawResponse
     with_streaming_response: InvsyWithStreamedResponse
 
@@ -91,7 +91,7 @@ class Invsy(SyncAPIClient):
             _strict_response_validation=_strict_response_validation,
         )
 
-        self.projects = resources.ProjectsResource(self)
+        self.chats = resources.ChatsResource(self)
         self.with_raw_response = InvsyWithRawResponse(self)
         self.with_streaming_response = InvsyWithStreamedResponse(self)
 
@@ -193,7 +193,7 @@ class Invsy(SyncAPIClient):
 
 
 class AsyncInvsy(AsyncAPIClient):
-    projects: resources.AsyncProjectsResource
+    chats: resources.AsyncChatsResource
     with_raw_response: AsyncInvsyWithRawResponse
     with_streaming_response: AsyncInvsyWithStreamedResponse
 
@@ -238,7 +238,7 @@ class AsyncInvsy(AsyncAPIClient):
             _strict_response_validation=_strict_response_validation,
         )
 
-        self.projects = resources.AsyncProjectsResource(self)
+        self.chats = resources.AsyncChatsResource(self)
         self.with_raw_response = AsyncInvsyWithRawResponse(self)
         self.with_streaming_response = AsyncInvsyWithStreamedResponse(self)
 
@@ -341,22 +341,22 @@ class AsyncInvsy(AsyncAPIClient):
 
 class InvsyWithRawResponse:
     def __init__(self, client: Invsy) -> None:
-        self.projects = resources.ProjectsResourceWithRawResponse(client.projects)
+        self.chats = resources.ChatsResourceWithRawResponse(client.chats)
 
 
 class AsyncInvsyWithRawResponse:
     def __init__(self, client: AsyncInvsy) -> None:
-        self.projects = resources.AsyncProjectsResourceWithRawResponse(client.projects)
+        self.chats = resources.AsyncChatsResourceWithRawResponse(client.chats)
 
 
 class InvsyWithStreamedResponse:
     def __init__(self, client: Invsy) -> None:
-        self.projects = resources.ProjectsResourceWithStreamingResponse(client.projects)
+        self.chats = resources.ChatsResourceWithStreamingResponse(client.chats)
 
 
 class AsyncInvsyWithStreamedResponse:
     def __init__(self, client: AsyncInvsy) -> None:
-        self.projects = resources.AsyncProjectsResourceWithStreamingResponse(client.projects)
+        self.chats = resources.AsyncChatsResourceWithStreamingResponse(client.chats)
 
 
 Client = Invsy
