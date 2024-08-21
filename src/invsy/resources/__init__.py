@@ -1,19 +1,19 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-from .projects import (
-    ProjectsResource,
-    AsyncProjectsResource,
-    ProjectsResourceWithRawResponse,
-    AsyncProjectsResourceWithRawResponse,
-    ProjectsResourceWithStreamingResponse,
-    AsyncProjectsResourceWithStreamingResponse,
+from .chats import (
+    ChatsResource,
+    AsyncChatsResource,
+    ChatsResourceWithRawResponse,
+    AsyncChatsResourceWithRawResponse,
+    ChatsResourceWithStreamingResponse,
+    AsyncChatsResourceWithStreamingResponse,
 )
 
 __all__ = [
-    "ProjectsResource",
-    "AsyncProjectsResource",
-    "ProjectsResourceWithRawResponse",
-    "AsyncProjectsResourceWithRawResponse",
-    "ProjectsResourceWithStreamingResponse",
-    "AsyncProjectsResourceWithStreamingResponse",
+    "ChatsResource",
+    "AsyncChatsResource",
+    "ChatsResourceWithRawResponse",
+    "AsyncChatsResourceWithRawResponse",
+    "ChatsResourceWithStreamingResponse",
+    "AsyncChatsResourceWithStreamingResponse",
 ]

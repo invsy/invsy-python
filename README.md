@@ -31,15 +31,12 @@ from invsy import Invsy
 
 client = Invsy()
 
-chat_create_response = client.projects.users.chats.create(
-    user_id="REPLACE_ME",
+chat_retrieve_response = client.chats.retrieve(
+    chat_id="REPLACE_ME",
     project_id="REPLACE_ME",
-    body={
-        "share_path": "/custom/path",
-        "group_id": "group123",
-    },
+    user_id="REPLACE_ME",
 )
-print(chat_create_response.result)
+print(chat_retrieve_response.result)
 ```
 
 ## Async usage
@@ -54,15 +51,12 @@ client = AsyncInvsy()
 
 
 async def main() -> None:
-    chat_create_response = await client.projects.users.chats.create(
-        user_id="REPLACE_ME",
+    chat_retrieve_response = await client.chats.retrieve(
+        chat_id="REPLACE_ME",
         project_id="REPLACE_ME",
-        body={
-            "share_path": "/custom/path",
-            "group_id": "group123",
-        },
+        user_id="REPLACE_ME",
     )
-    print(chat_create_response.result)
+    print(chat_retrieve_response.result)
 
 
 asyncio.run(main())
@@ -95,13 +89,10 @@ from invsy import Invsy
 client = Invsy()
 
 try:
-    client.projects.users.chats.create(
-        user_id="REPLACE_ME",
+    client.chats.retrieve(
+        chat_id="REPLACE_ME",
         project_id="REPLACE_ME",
-        body={
-            "share_path": "/custom/path",
-            "group_id": "group123",
-        },
+        user_id="REPLACE_ME",
     )
 except invsy.APIConnectionError as e:
     print("The server could not be reached")
@@ -145,13 +136,10 @@ client = Invsy(
 )
 
 # Or, configure per-request:
-client.with_options(max_retries=5).projects.users.chats.create(
-    user_id="REPLACE_ME",
+client.with_options(max_retries=5).chats.retrieve(
+    chat_id="REPLACE_ME",
     project_id="REPLACE_ME",
-    body={
-        "share_path": "/custom/path",
-        "group_id": "group123",
-    },
+    user_id="REPLACE_ME",
 )
 ```
 
@@ -175,13 +163,10 @@ client = Invsy(
 )
 
 # Override per-request:
-client.with_options(timeout=5.0).projects.users.chats.create(
-    user_id="REPLACE_ME",
+client.with_options(timeout=5.0).chats.retrieve(
+    chat_id="REPLACE_ME",
     project_id="REPLACE_ME",
-    body={
-        "share_path": "/custom/path",
-        "group_id": "group123",
-    },
+    user_id="REPLACE_ME",
 )
 ```
 
@@ -221,17 +206,14 @@ The "raw" Response object can be accessed by prefixing `.with_raw_response.` to 
 from invsy import Invsy
 
 client = Invsy()
-response = client.projects.users.chats.with_raw_response.create(
-    user_id="REPLACE_ME",
+response = client.chats.with_raw_response.retrieve(
+    chat_id="REPLACE_ME",
     project_id="REPLACE_ME",
-    body={
-        "share_path": "/custom/path",
-        "group_id": "group123",
-    },
+    user_id="REPLACE_ME",
 )
 print(response.headers.get('X-My-Header'))
 
-chat = response.parse()  # get the object that `projects.users.chats.create()` would have returned
+chat = response.parse()  # get the object that `chats.retrieve()` would have returned
 print(chat.result)
 ```
 
@@ -246,13 +228,10 @@ The above interface eagerly reads the full response body when you make the reque
 To stream the response body, use `.with_streaming_response` instead, which requires a context manager and only reads the response body once you call `.read()`, `.text()`, `.json()`, `.iter_bytes()`, `.iter_text()`, `.iter_lines()` or `.parse()`. In the async client, these are async methods.
 
 ```python
-with client.projects.users.chats.with_streaming_response.create(
-    user_id="REPLACE_ME",
+with client.chats.with_streaming_response.retrieve(
+    chat_id="REPLACE_ME",
     project_id="REPLACE_ME",
-    body={
-        "share_path": "/custom/path",
-        "group_id": "group123",
-    },
+    user_id="REPLACE_ME",
 ) as response:
     print(response.headers.get("X-My-Header"))
 
